@@ -3,27 +3,26 @@ import '../assets/css/style.css';
 const app = document.getElementById('app');
 app.innerHTML = '<h1>JavaScript Basics</h1>';
 
-console.log(1 == 1);
-console.log(1 == '1');
-console.log(1 === 1);
-console.log(1 === '1');
+// ----
+const condition = true;
 
-// truthy values
-console.log(!!true);
-console.log(Boolean(true));
-console.log(!!{});
-console.log(!![]);
-console.log(!!new Date());
-console.log(!!'0');
-console.log(!!42);
-console.log(!!-42);
-console.log(!!3.14);
-console.log(!!-3.14);
+if (condition) {
+  console.log('Yes');
+} else {
+  console.log('No');
+}
 
-// falsy values
-console.log(!!false);
-console.log(!!null);
-console.log(!!undefined);
-console.log(!!0);
-console.log(!!NaN);
-console.log(!!'');
+const number = 99;
+let result; // undefined
+
+if (number === 1) {
+  result = 'One';
+} else if (number === 99) {
+  result = 'Ninety-Nine';
+} else if (number === 1000) {
+  result = 'One Thousand';
+} else {
+  result = 'No Match';
+}
+
+console.log(result);
