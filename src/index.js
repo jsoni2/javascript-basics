@@ -3,26 +3,16 @@ import '../assets/css/style.css';
 const app = document.getElementById('app');
 app.innerHTML = '<h1>JavaScript Basics</h1>';
 
-// ----
-const number = 1;
-let result;
+// literal
+const literalNumber = 99;
+console.log(literalNumber);
 
-switch (number) {
-  case 1: {
-    const text = 'One';
-    result = text;
-    break;
-  }
-  case 99: {
-    const text = 'Ninety-Nine';
-    result = text;
-    break;
-  }
-  case 1000:
-    result = 'One Thousand';
-    break;
-  default:
-    result = 'No Match';
-}
+// function syntax
+// perform a type-conversion in a non-constructor context
+console.log(Number(55));
+console.log(Number('33'));
+console.log(Number('44px'));
 
-console.log(result);
+// constructor syntax, creates a wrapper Object
+// avoid using it
+console.log(new Number('44px'));
