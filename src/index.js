@@ -3,16 +3,13 @@ import '../assets/css/style.css';
 const app = document.getElementById('app');
 app.innerHTML = '<h1>JavaScript Basics</h1>';
 
-// literal
-const literalNumber = 99;
-console.log(literalNumber);
+// ----
+console.log(0.1 + 0.2);
 
-// function syntax
-// perform a type-conversion in a non-constructor context
-console.log(Number(55));
-console.log(Number('33'));
-console.log(Number('44px'));
+const price = 9.33;
+const quantity = 3;
+console.log(price * quantity);
 
-// constructor syntax, creates a wrapper Object
-// avoid using it
-console.log(new Number('44px'));
+const anotherPrice = 9.33 * 100;
+const anotherQuantity = 3;
+console.log((anotherPrice * anotherQuantity) / 100);
