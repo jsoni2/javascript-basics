@@ -4,9 +4,16 @@ const app = document.getElementById('app');
 app.innerHTML = '<h1>JavaScript Basics</h1>';
 
 // ----
-console.log(parseInt('55px', 10));
-console.log(parseFloat('55.9999px') * 10);
+const result = Number('55px');
 
-console.log(Number('55e10'));
-console.log(Number('55.9999'));
-console.log(9 + +'99.5555');
+// isNaN "NaN"
+console.log(isNaN(result));
+console.log(isNaN('I am a String!'));
+
+console.log(Number.NaN);
+console.log(Number.isNaN(result));
+console.log(Number.isNaN('I am another String!'));
+console.log(Number.isNaN(Number.NaN));
+
+console.log(Number.isInteger(66));
+
