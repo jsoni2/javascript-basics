@@ -4,7 +4,17 @@ const app = document.getElementById('app');
 app.innerHTML = '<h1>JavaScript Basics</h1>';
 
 // ----
-console.log(Number.prototype);
-console.log(parseFloat((99.12345678).toFixed(4)));
-console.log((99.12345678).toPrecision(5));
-console.log(new Number(99).valueOf());
+console.log('Pizza "Hello!"');
+
+const pizza = 'Pepperoni';
+console.log('Pizza is: ' + pizza + '!');
+console.log(`
+Pizza is:
+${pizza}!
+`);
+
+console.log(String(55 + 11), 55 + '11');
+console.log(String({ name: 'Pepperoni' }));
+console.log(String([1, 2, 3, 4]));
+
+console.log(new String(55));
