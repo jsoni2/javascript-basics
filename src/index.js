@@ -4,12 +4,9 @@ const app = document.getElementById('app');
 app.innerHTML = '<h1>JavaScript Basics</h1>';
 
 // ----
-console.log(0.1 + 0.2);
+console.log(parseInt('55px', 10));
+console.log(parseFloat('55.9999px') * 10);
 
-const price = 9.33;
-const quantity = 3;
-console.log(price * quantity);
-
-const anotherPrice = 9.33 * 100;
-const anotherQuantity = 3;
-console.log((anotherPrice * anotherQuantity) / 100);
+console.log(Number('55e10'));
+console.log(Number('55.9999'));
+console.log(9 + +'99.5555');
