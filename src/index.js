@@ -3,6 +3,12 @@ import '../assets/css/style.css';
 const app = document.getElementById('app');
 app.innerHTML = '<h1>JavaScript Basics</h1>';
 
+// Correctly Type-Checking Booleans
+console.log(typeof false);
+console.log(true instanceof Boolean);
+console.log(new Boolean('X') instanceof Boolean);
+console.log(Object.prototype.toString.call(true));
+
 // // Boolean Literal, Function and Constructor Syntax
 // console.log(true, false);
 
