@@ -4,23 +4,35 @@ const app = document.getElementById('app');
 app.innerHTML = '<h1>JavaScript Basics</h1>';
 
 // ----
-function makeCarPrice() {
-  console.log(arguments, Array.isArray(arguments));
-  const total = Array.from(arguments).reduce((prev, next) => {
-    return prev + next;
-  });
-  console.log(`Total: ${total}USD`);
-}
-
-makeCarPrice(11, 44, 55, 99, 66);
-
-function makeCarPriceRest(...params) {
-  console.log(Array.isArray(params));
+function makeCarPrice(...params) {
   const total = params.reduce((prev, next) => prev + next);
-  console.log(`Total: ${total}USD`);
+  return total;
 }
 
-makeCarPriceRest(99, 88, 77, 11, 44);
+const makeCarPriceArrow = (...params) =>
+  params.reduce((prev, next) => prev + next);
+
+console.log(`Total: ${makeCarPrice(11, 22, 33, 44, 55, 66)}`);
+console.log(`Total: ${makeCarPriceArrow(99, 77, 44)}`);
+
+// // ----
+// function makeCarPrice() {
+//   console.log(arguments, Array.isArray(arguments));
+//   const total = Array.from(arguments).reduce((prev, next) => {
+//     return prev + next;
+//   });
+//   console.log(`Total: ${total}USD`);
+// }
+
+// makeCarPrice(11, 44, 55, 99, 66);
+
+// function makeCarPriceRest(...params) {
+//   console.log(Array.isArray(params));
+//   const total = params.reduce((prev, next) => prev + next);
+//   console.log(`Total: ${total}USD`);
+// }
+
+// makeCarPriceRest(99, 88, 77, 11, 44);
 
 // // ----
 // // name = parameter
