@@ -3,11 +3,44 @@ import '../assets/css/style.css';
 const app = document.getElementById('app');
 app.innerHTML = '<h1>JavaScript Basics</h1>';
 
-// Correctly Type-Checking Booleans
-console.log(typeof false);
-console.log(true instanceof Boolean);
-console.log(new Boolean('X') instanceof Boolean);
-console.log(Object.prototype.toString.call(true));
+// ----
+
+// hoisting
+console.log(makeCar);
+console.log(makeCarExpression);
+console.log(makeCarArrow);
+console.log(makeCarArrowShorthand);
+
+// 1: Fuction Declaration
+
+function makeCar() {
+  console.log('Making car...');
+}
+
+makeCar();
+
+// 2: Function Expression(annonymous or named)
+const makeCarExpression = function myFunc() {}
+
+console.log(makeCarExpression.name);
+
+// 3: Arrow Function
+const makeCarArrow = () => {
+  console.log('make car inside arrow');
+};
+
+makeCarArrow();
+
+const makeCarArrowShorthand = () => console.log('short');
+
+makeCarArrowShorthand();
+
+
+// // Correctly Type-Checking Booleans
+// console.log(typeof false);
+// console.log(true instanceof Boolean);
+// console.log(new Boolean('X') instanceof Boolean);
+// console.log(Object.prototype.toString.call(true));
 
 // // Boolean Literal, Function and Constructor Syntax
 // console.log(true, false);
