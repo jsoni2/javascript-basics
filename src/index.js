@@ -4,36 +4,53 @@ const app = document.getElementById('app');
 app.innerHTML = '<h1>JavaScript Basics</h1>';
 
 // ----
+// name = parameter
+function makeCar(name = 'Porsche') {
+  // name = name || 'Porsche';
 
-// hoisting
-console.log(makeCar);
-console.log(makeCarExpression);
-console.log(makeCarArrow);
-console.log(makeCarArrowShorthand);
-
-// 1: Fuction Declaration
-
-function makeCar() {
-  console.log('Making car...');
+  // if (!name) {
+  //   name = 'Porsche';
+  // }
+  console.log(`Making car: ${name.toUpperCase()}`);
 }
 
+// strings = arguments
+makeCar('Porsche');
+makeCar('Ferrari');
 makeCar();
 
-// 2: Function Expression(annonymous or named)
-const makeCarExpression = function myFunc() {}
 
-console.log(makeCarExpression.name);
+// // ----
 
-// 3: Arrow Function
-const makeCarArrow = () => {
-  console.log('make car inside arrow');
-};
+// // hoisting
+// console.log(makeCar);
+// console.log(makeCarExpression);
+// console.log(makeCarArrow);
+// console.log(makeCarArrowShorthand);
 
-makeCarArrow();
+// // 1: Fuction Declaration
 
-const makeCarArrowShorthand = () => console.log('short');
+// function makeCar() {
+//   console.log('Making car...');
+// }
 
-makeCarArrowShorthand();
+// makeCar();
+
+// // 2: Function Expression(annonymous or named)
+// const makeCarExpression = function myFunc() {}
+
+// console.log(makeCarExpression.name);
+
+// // 3: Arrow Function
+// const makeCarArrow = () => {
+//   console.log('make car inside arrow');
+// };
+
+// makeCarArrow();
+
+// const makeCarArrowShorthand = () => console.log('short');
+
+// makeCarArrowShorthand();
 
 
 // // Correctly Type-Checking Booleans
