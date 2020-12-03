@@ -4,20 +4,39 @@ const app = document.getElementById('app');
 app.innerHTML = '<h1>JavaScript Basics</h1>';
 
 // ----
-// name = parameter
-function makeCar(name = 'Porsche') {
-  // name = name || 'Porsche';
-
-  // if (!name) {
-  //   name = 'Porsche';
-  // }
-  console.log(`Making car: ${name.toUpperCase()}`);
+function makeCarPrice() {
+  console.log(arguments, Array.isArray(arguments));
+  const total = Array.from(arguments).reduce((prev, next) => {
+    return prev + next;
+  });
+  console.log(`Total: ${total}USD`);
 }
 
-// strings = arguments
-makeCar('Porsche');
-makeCar('Ferrari');
-makeCar();
+makeCarPrice(11, 44, 55, 99, 66);
+
+function makeCarPriceRest(...params) {
+  console.log(Array.isArray(params));
+  const total = params.reduce((prev, next) => prev + next);
+  console.log(`Total: ${total}USD`);
+}
+
+makeCarPriceRest(99, 88, 77, 11, 44);
+
+// // ----
+// // name = parameter
+// function makeCar(name = 'Porsche') {
+//   // name = name || 'Porsche';
+
+//   // if (!name) {
+//   //   name = 'Porsche';
+//   // }
+//   console.log(`Making car: ${name.toUpperCase()}`);
+// }
+
+// // strings = arguments
+// makeCar('Porsche');
+// makeCar('Ferrari');
+// makeCar();
 
 
 // // ----
